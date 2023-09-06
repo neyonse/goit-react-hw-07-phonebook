@@ -1,0 +1,82 @@
+@import-normalize;
+@import 'fonts/fonts.css';
+@import 'css/variables.css';
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-secondary-color);
+  /* background: linear-gradient(
+    var(--main-color) 0%,
+    var(--main-color) 40%,
+    var(--secondary-color) 65%
+  ); */
+  background-color: var(--main-color);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container {
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 767px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .container {
+    padding: 0 24px;
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    padding: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .main-wrapper {
+    display: flex;
+    gap: 64px;
+    margin: 40px auto;
+    padding: 0 32px;
+    max-width: 1440px;
+    width: 1440px;
+  }
+
+  body {
+    background-color: var(--main-color);
+  }
+}

@@ -1,0 +1,43 @@
+.addContactSection {
+  padding: 32px 0;
+
+  color: var(--text-secondary-color);
+  background-color: var(--main-color);
+}
+
+.contactListSection {
+  padding: 32px 0 64px;
+  width: 100%;
+
+  color: var(--text-main-color);
+  background-color: var(--secondary-color);
+  border-radius: 35px 35px 0 0;
+}
+
+@media screen and (min-width: 1440px) {
+  .contactListSection {
+    border-radius: 35px;
+  }
+
+  .contactListSection > div {
+    padding: 0 32px;
+  }
+}
+
+.sectionTitle {
+  text-align: center;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.addContactSection .sectionTitle {
+  color: var(--text-secondary-color);
+}
+
+.contactListSection .sectionTitle {
+  font-size: 28px;
+
+  color: var(--text-main-color);
+}
