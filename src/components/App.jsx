@@ -1,12 +1,18 @@
+import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { getContacts } from 'redux/selectors';
+import { selectContacts } from 'redux/selectors';
+import { fetchContacts } from 'redux/operations';
 import { Section } from './Section';
 import { AddContactForm } from './AddContactForm';
 import { Filter } from './Filter';
 import { ContactsList } from './ContactsList';
 
 export function App() {
-  const contactsFromState = useSelector(getContacts);
+  useEffect(() => {
+    fetchContacts();
+  }, []);
+
+  const contactsFromState = useSelector(selectContacts);
 
   return (
     <div className="main-wrapper">

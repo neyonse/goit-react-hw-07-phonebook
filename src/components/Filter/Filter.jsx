@@ -1,12 +1,12 @@
 import css from './Filter.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { setFilter } from 'redux/filterSlice';
-import { getFilter } from 'redux/selectors';
+import { selectFilter } from 'redux/selectors';
 import { LuSearch } from 'react-icons/lu';
 
 export function Filter() {
   const dispatch = useDispatch();
-  const filterValue = useSelector(getFilter);
+  const filterValue = useSelector(selectFilter);
 
   const handleChange = e => {
     const { value } = e.currentTarget;
