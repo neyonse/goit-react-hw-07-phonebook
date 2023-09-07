@@ -1,6 +1,6 @@
 import css from './AddContactForm.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from 'redux/contactsSlice';
+import { addContact } from 'redux/operations';
 import { selectContacts } from 'redux/selectors';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as yup from 'yup';
@@ -29,12 +29,12 @@ const schema = yup.object({
 
 export function AddContactForm() {
   const dispatch = useDispatch();
-  const contactsFromState = useSelector(selectContacts);
+  const contacts = useSelector(selectContacts);
 
   const isContactAlreadyAdded = name => {
     const nameToLowerCase = name.toLowerCase();
 
-    return contactsFromState.findIndex(
+    return contacts.findIndex(
       contact => contact.name.toLowerCase() === nameToLowerCase
     );
   };

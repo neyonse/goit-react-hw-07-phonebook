@@ -1,5 +1,5 @@
 import css from './ContactCard.module.css';
-import { deleteContact } from 'redux/contactsSlice';
+import { deleteContact } from 'redux/operations';
 import { useDispatch } from 'react-redux';
 import { FaPhoneAlt } from 'react-icons/fa';
 import PropTypes from 'prop-types';
